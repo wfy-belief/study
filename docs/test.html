@@ -4,7 +4,16 @@
     <meta charset="UTF-8">
     <title>Awesome-pyecharts</title>
 	<script language="javascript">
-    if (self!=top) window.top.location.replace(self.location);
+    try{
+　　top.location.hostname;
+　　if (top.location.hostname != window.location.hostname) {
+　　　　top.location.href =window.location.href;
+　　}
+}
+
+catch(e){
+　　top.location.href = window.location.href;
+}
 </script>
             <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
         <script type="text/javascript" src="https://assets.pyecharts.org/assets/themes/macarons.js"></script>
